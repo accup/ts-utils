@@ -3,12 +3,15 @@
   "name": "ts-utils",
   "description": "Utility packages for JavaScript/TypeScript",
   "devDependencies": {
+    "@types/node": "^18.11.7",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@typescript-eslint/parser": "^5.41.0",
+    "@vitest/ui": "^0.24.3",
     "eslint": "^8.26.0",
     "prettier": "2.7.1",
     "typescript": "^4.6.4",
-    "vite": "^3.2.0"
+    "vite": "^3.2.0",
+    "vitest": "^0.24.3"
   },
   "scripts": {
     "eslint": "eslint . --ignore-path .gitignore",

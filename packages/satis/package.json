@@ -1,0 +1,36 @@
+{
+  "name": "@accup/satis",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Accup",
+  "description": "Object property fallback utility in JavaScript/TypeScript",
+  "main": "./dist/satis.cjs",
+  "module": "./dist/satis.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/satis.js",
+      "require": "./dist/satis.cjs"
+    }
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accup/browser-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/accup/browser-utils/issues"
+  },
+  "homepage": "https://github.com/accup/browser-utils#readme",
+  "scripts": {
+    "test": "vitest --ui",
+    "coverage": "vitest run --coverage",
+    "build": "vite build && tsc"
+  }
+}
