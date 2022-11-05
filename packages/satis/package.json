@@ -29,7 +29,6 @@
   },
   "homepage": "https://github.com/accup/browser-utils#readme",
   "scripts": {
-    "test": "jest",
     "build": "vite build && tsc"
   }
 }
