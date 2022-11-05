@@ -29,8 +29,8 @@
   },
   "homepage": "https://github.com/accup/browser-utils#readme",
   "scripts": {
-    "test": "vitest",
-    "coverage": "vitest run --coverage",
+    "dev": "vitest watch",
+    "test": "vitest run",
     "build": "vite build && tsc"
   }
 }
