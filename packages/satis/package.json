@@ -4,7 +4,7 @@
   "type": "module",
   "license": "MIT",
   "author": "Accup",
-  "description": "Object property fallback utility in JavaScript/TypeScript",
+  "description": "Optional value utility in JavaScript/TypeScript",
   "main": "./dist/satis.cjs",
   "module": "./dist/satis.js",
   "types": "./dist/types/index.d.ts",
@@ -22,12 +22,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/accup/browser-utils.git"
+    "url": "git+https://github.com/accup/ts-utils.git"
   },
   "bugs": {
-    "url": "https://github.com/accup/browser-utils/issues"
+    "url": "https://github.com/accup/ts-utils/issues"
   },
-  "homepage": "https://github.com/accup/browser-utils#readme",
+  "homepage": "https://github.com/accup/ts-utils/packages/satis#readme",
   "scripts": {
     "build": "vite build && tsc"
   }
