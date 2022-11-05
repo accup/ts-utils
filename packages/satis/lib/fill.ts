@@ -25,8 +25,8 @@ export type FilledRecord<T extends RecordFillingDescriptorLike> = {
 
 export function makeStaticFillingFunction<T, U extends T = T>(
   alternative: T
-): (partial: U | undefined) => T | U {
-  return (partial: U | undefined): T | U => {
+): (partial?: U | undefined) => T | U {
+  return (partial?: U | undefined): T | U => {
     if (partial === undefined) {
       return alternative;
     } else {
@@ -39,8 +39,8 @@ export function makeRecordFillingFunction<
   T extends RecordFillingDescriptorLike
 >(
   descriptor: Readonly<T>
-): FillingFunction<PartialRecord<T> | undefined, FilledRecord<T>> {
-  return (partial: PartialRecord<T> | undefined) =>
+): (partial?: PartialRecord<T> | undefined) => FilledRecord<T> {
+  return (partial?: PartialRecord<T> | undefined) =>
     Object.fromEntries(
       Object.entries(descriptor).map(([key, fill]) => [
         key,
@@ -51,8 +51,8 @@ export function makeRecordFillingFunction<
 
 export function makeArrayFillingFunction<F extends FillingFunctionLike>(
   fill: F
-): FillingFunction<Iterable<PartialValue<F>> | undefined, FilledValue<F>[]> {
-  return (partials: Iterable<PartialValue<F>> | undefined) =>
+): (partials?: Iterable<PartialValue<F>> | undefined) => FilledValue<F>[] {
+  return (partials?: Iterable<PartialValue<F>> | undefined) =>
     partials === undefined
       ? []
       : [...partials].map((partial) =>

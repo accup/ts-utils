@@ -30,6 +30,13 @@ describe("Filling function returned from 'opt'", () => {
   describe.each([{ alternative: undefined as unknown }])(
     "when given alternative: $alternative",
     ({ alternative }) => {
+      it.each([{ expected: undefined }])(
+        "and with no arguments returns $expected",
+        ({ expected }) => {
+          expect(opt(alternative)()).toEqual(expected);
+        }
+      );
+
       it.each([
         { partial: undefined, expected: undefined },
         { partial: null, expected: null },
@@ -60,6 +67,13 @@ describe("Filling function returned from 'opt'", () => {
     { alternative: { bar: "baz" } as object },
     { alternative: ["qux"] },
   ])("with alternative: $alternative", ({ alternative }) => {
+    it.each([{ expected: alternative }])(
+      "and with no arguments returns $expected",
+      ({ expected }) => {
+        expect(opt(alternative)()).toEqual(expected);
+      }
+    );
+
     it.each([
       { partial: undefined, expected: alternative },
       { partial: null, expected: null },
@@ -86,6 +100,13 @@ describe("Filling function returned from 'opts'", () => {
       },
     },
   ])("with descriptor: $descriptor", ({ descriptor }) => {
+    it.each([{ expected: { foo: "bar" } }])(
+      "and with no arguments returns $expected",
+      ({ expected }) => {
+        expect(opts(descriptor)()).toEqual(expected);
+      }
+    );
+
     it.each([
       {
         partial: undefined,
@@ -126,6 +147,13 @@ describe("Filling function returned from 'optEach'", () => {
       fill: (partial: unknown) => partial ?? "foo",
     },
   ])("with fill: $fill", ({ fill }) => {
+    it.each([{ expected: [] }])(
+      "and with no arguments returns $expected",
+      ({ expected }) => {
+        expect(optEach(fill)()).toEqual(expected);
+      }
+    );
+
     it.each([
       {
         partial: undefined,
