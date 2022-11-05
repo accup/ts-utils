@@ -1,6 +1,7 @@
 {
   "private": true,
   "name": "ts-utils",
+  "type": "module",
   "description": "Utility packages for JavaScript/TypeScript",
   "devDependencies": {
     "@types/jest": "^29.2.2",
