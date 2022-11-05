@@ -93,7 +93,7 @@ const fillOptions1 = filling<Options>()(
 const fillOptions2 = filling<Options>()(
   opts({
     foo: opt(""),
-    bar: opt(0),
+    bar: opt("0"),
   })
 );
 ```
