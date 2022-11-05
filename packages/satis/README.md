@@ -89,11 +89,11 @@ const fillOptions1 = filling<Options>()(
   })
 );
 
-// Insufficient definition causes a type error
+// Insufficient definition causes a TypeScript compiler error
 const fillOptions2 = filling<Options>()(
   opts({
     foo: opt(""),
-    bar: opt("0"),
+    bar: opt("0"), // Type 'string' is not assignable to type 'number'.
   })
 );
 ```
