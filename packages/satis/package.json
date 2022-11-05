@@ -1,0 +1,32 @@
+{
+  "name": "@accup/satis",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Accup",
+  "description": "Optional value utility in JavaScript/TypeScript",
+  "main": "./dist/satis.cjs",
+  "module": "./dist/satis.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/satis.js",
+      "require": "./dist/satis.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accup/ts-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/accup/ts-utils/issues"
+  },
+  "homepage": "https://github.com/accup/ts-utils/packages/satis#readme",
+  "scripts": {
+    "build": "vite build && tsc"
+  }
+}
