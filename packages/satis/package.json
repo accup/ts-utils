@@ -16,8 +16,6 @@
     }
   },
   "files": [
-    "LICENSE",
-    "README.md",
     "dist"
   ],
   "repository": {
