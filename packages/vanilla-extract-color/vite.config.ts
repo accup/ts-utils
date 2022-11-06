@@ -9,5 +9,8 @@ export default defineConfig({
       fileName: "vanilla-extract-color",
       formats: ["es", "cjs"],
     },
+    rollupOptions: {
+      external: ["@vanilla-extract/css"],
+    },
   },
 });
