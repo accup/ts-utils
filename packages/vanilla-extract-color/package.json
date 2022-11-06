@@ -1,0 +1,35 @@
+{
+  "name": "@accup/vanilla-extract-color",
+  "version": "0.0.0",
+  "type": "module",
+  "license": "MIT",
+  "author": "Accup",
+  "description": "Color utility for vanilla-extract",
+  "main": "./dist/vanilla-extract-color.cjs",
+  "module": "./dist/vanilla-extract-color.js",
+  "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/vanilla-extract-color.js",
+      "require": "./dist/vanilla-extract-color.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accup/ts-utils.git"
+  },
+  "bugs": {
+    "url": "https://github.com/accup/ts-utils/issues"
+  },
+  "homepage": "https://github.com/accup/ts-utils/tree/main/packages/vanilla-extract-color#readme",
+  "scripts": {
+    "build": "vite build && tsc"
+  },
+  "devDependencies": {
+    "@vanilla-extract/css": "^1.9.1"
+  }
+}
