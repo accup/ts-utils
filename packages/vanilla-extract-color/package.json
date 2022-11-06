@@ -28,8 +28,5 @@
   "homepage": "https://github.com/accup/ts-utils/tree/main/packages/vanilla-extract-color#readme",
   "scripts": {
     "build": "vite build && tsc"
-  },
-  "devDependencies": {
-    "@vanilla-extract/css": "^1.9.1"
   }
 }
